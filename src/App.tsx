@@ -60,6 +60,7 @@ const compareCards = (card1: Card, card2: Card) => {
     <div className="App">
       <h1>Magic Match</h1>
       <button onClick={shuffleCards}>New Game</button>
+      <p>Turn {turns}</p>
       <div className="card-grid">
         {cards.map(card => (
           <SingleCard key={card.id} card={card}  handleChoice={handleChoice}
