@@ -2,14 +2,15 @@ import React from 'react'
 
 interface SingleCardProps {
     card: Card,
-    flipped: boolean
+    flipped: boolean,
+    disabled: boolean,
     handleChoice: (card: Card) => void
 }
  
-const SingleCard: React.FC<SingleCardProps> = ({ card, flipped, handleChoice }) => {
+const SingleCard: React.FC<SingleCardProps> = ({ card, flipped, disabled, handleChoice }) => {
 
   const handleClick = () => {
-    handleChoice(card);
+    !disabled && handleChoice(card);
   }
 
     return ( 
